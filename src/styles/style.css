@@ -1,0 +1,183 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --border: 1px solid rgba(32, 32, 32, 0.24);
+}
+
+body {
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  color: rgb(24, 24, 24);
+}
+
+header {
+  height: 4rem;
+  padding: 0 1.5em;
+  display: flex;
+  align-items: center;
+  border-bottom: var(--border);
+}
+
+.wrapper {
+  display: flex;
+  flex-grow: 1;
+}
+
+button {
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+/* Projects */
+
+.projects {
+  flex-basis: 20%;
+  min-width: 300px;
+  border-right: var(--border);
+}
+
+.projects .projects-header {
+  padding: 1.5em;
+}
+
+.projects-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: var(--border);
+}
+
+.projects-header button {
+  background: rgb(8, 151, 8);
+  color: #fff;
+  font-family: inherit;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  padding: 0.2em 1em;
+  border: none;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.project-title {
+  font-size: 1.2rem;
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.project {
+  padding: 0.5em 1.5em 0.5em 1.5em;
+  display: flex;
+  justify-content: space-between;
+  border: var(--border);
+}
+
+.input-wrapper {
+  display: grid;
+  gap: 0.2em;
+}
+
+input {
+  font-family: inherit;
+}
+
+input:focus {
+  outline: 1px solid gray;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 0.3em;
+}
+
+.form-buttons button {
+  flex-basis: 50%;
+  height: 35px;
+  width: 90px;
+}
+
+.form-buttons .project-cancel {
+  border: var(--border);
+}
+
+.hidden {
+  display: none !important;
+}
+
+.modal {
+  position: fixed;
+  inset: 0 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal form {
+  padding: 1em;
+  background: #fff;
+}
+
+.project button {
+  visibility: hidden;
+  max-height: 40px;
+  background-color: rgb(207, 23, 23);
+  border: rgb(207, 23, 23);
+  color: #fff;
+}
+
+.no-projects {
+  padding: 1.5em;
+}
+
+.project:hover button {
+  visibility: unset;
+}
+
+.project-add {
+  background-color: green;
+  color: #fff;
+  border: 1px solid green;
+}
+
+.project-title {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.project-active {
+  background: rgba(6, 196, 123, 0.24);
+}
+
+.project:not(.project-active):hover {
+  background: rgba(4, 82, 52, 0.24);
+}
+
+.todos {
+  flex-basis: 80%;
+}
+
+.todos > * {
+  padding: 1.5em;
+  border-bottom: var(--border);
+}
